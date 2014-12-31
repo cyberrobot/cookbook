@@ -1,0 +1,42 @@
+<div class="container">
+  <tabset class="recipeDetails">
+    <tab heading="Recipe Details">
+      <header>
+        <hgroup>
+          <h1>{{recipe.title}}</h1>
+          <h2>{{recipe.description}}</h2>
+        </hgroup>
+        <figure class="imagePlaceholder">
+          <img ng-src="{{recipe.imageUrl}}" class="img-responsive" alt="{{recipe.title}}">
+        </figure>
+      </header>
+      <aside class="bg-info instructions">
+        <dl>
+          <dt>Preparation time</dt>
+          <dd>{{recipe.preparationTime}}</dd>
+          <dt>Cooking time</dt>
+          <dd>{{recipe.cookingTime}}</dd>
+          <dt>Serves</dt>
+          <dd>{{recipe.serves}}</dd>
+        </dl>
+      </aside>
+    </tab>
+    <tab heading="Ingredients">
+      <header>
+        <h1>Ingredients</h1>
+      </header>
+      <ul class="ingredients">
+        <li ng-repeat="ingredient in ingredients">{{ingredient.title}}</li>
+      </ul>
+    </tab>
+    <tab heading="Method">
+      <header>
+        <h1>Method</h1>
+      </header>
+      <ul>
+        <li ng-repeat="step in method"><span class="stepId">Step {{step.id + 1}}:</span> {{step.title}}</li>
+      </ul>
+    </tab>
+  </tabset>
+  <a id="backButton" href="#/main" class="btn btn-default">Back to recipes</a>
+</div>

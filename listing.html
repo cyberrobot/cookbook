@@ -1,0 +1,16 @@
+<div>
+  <ul class="container-fluid recipeList">
+    <li ng-repeat="recipe in recipes">
+      <a href="#/recipe/{{recipe.recipeId}}" title="Read more about {{recipe.title}}">
+        <dl class="row">
+          <dt class="col-xs-3 col-sm-1 col-md-1">
+            <img ng-src="{{recipe.imageUrl}}" class="img-responsive" alt="recipe.title" />
+          </dt>
+          <dd class="col-xs-9 col-sm-11 col-md-11">
+            <h2>{{recipe.title}}</h2>
+          </dd>
+        </dl>
+      </a>
+    </li>
+  </ul>
+</div>
